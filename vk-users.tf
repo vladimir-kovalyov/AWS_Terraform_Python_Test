@@ -13,13 +13,13 @@ resource "aws_iam_policy" "vk_user_a_policy" {
             "Sid": "ListObjectsInBucket",
             "Effect": "Allow",
             "Action": ["s3:ListBucket"],
-            "Resource": [""${aws_s3_bucket.vk_bucket_a.arn}"]
+            "Resource": ["${aws_s3_bucket.vk_bucket_a.arn}"]
         },
         {
             "Sid": "AllObjectActions",
             "Effect": "Allow",
             "Action": "s3:*Object",
-            "Resource": [""${aws_s3_bucket.vk_bucket_a.arn}/*"]
+            "Resource": ["${aws_s3_bucket.vk_bucket_a.arn}/*"]
         }
     ]
 }
@@ -47,13 +47,13 @@ resource "aws_iam_policy" "vk_user_b_policy" {
             "Sid": "ListObjectsInBucket",
             "Effect": "Allow",
             "Action": ["s3:ListBucket"],
-            "Resource": [""${aws_s3_bucket.vk_bucket_b.arn}"]
+            "Resource": ["${aws_s3_bucket.vk_bucket_b.arn}"]
         },
         {
             "Sid": "AllObjectActions",
             "Effect": "Allow",
             "Action": "s3:GetObject*",
-            "Resource": [""${aws_s3_bucket.vk_bucket_b.arn}/*"]
+            "Resource": ["${aws_s3_bucket.vk_bucket_b.arn}/*"]
         }
     ]
 }
